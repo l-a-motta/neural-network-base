@@ -28,7 +28,7 @@ E para que a saída seja alimentada, você usa a função feedForward.
 	n.feedForward();
 ```
 
-Inicialmente a rede neural possui 2 inputs, 2 neurons e 2 outputs. Para alterar isso, basta ir no código e mudar as constantes específicas.
+Inicialmente a rede neural possui 2 inputs, 4 neurons e 2 outputs. Para alterar isso, basta ir no código e mudar as constantes específicas.
 
 ```c
 	#define N_INPUTS 2
@@ -36,7 +36,7 @@ Inicialmente a rede neural possui 2 inputs, 2 neurons e 2 outputs. Para alterar 
 	#define N_OUTPUTS 2
 ```
 
-Os axons também estão restritos por MIN e MAX. Mudar esses valores também segue a mesma lógica.
+Os axons também estão restritos por MIN e MAX. Mudar esses valores também segue a mesma lógica, eles começam limitados entre -1 e 1.
 
 ```c
 	#define MIN_AXON -1
