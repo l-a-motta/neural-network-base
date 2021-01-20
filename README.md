@@ -1,17 +1,14 @@
-# 
-
-
 # neural-network-base
 
-This is a base for a Neural Network in C++, with feedforwarding but no backpropagation
+Esta é uma base para uma rede neural em C ++, com feedforwarding, mas sem backpropagation
 
 ## Installation
 
-You can just import this class in your program and use it as you will. There are comments inside as to how to use, but it follows basic class usage.
+Você pode simplesmente importar esta classe em seu programa e usá-la como quiser. Há comentários internos sobre como usar, mas segue o uso básico da classe.
 
 ## Usage
 
-First you need an array of doubles (that will be your input), a double for bias in the neuron and a double for bias in the output
+Primeiro você precisa de uma matriz de doubles (que será sua entrada), um double para viés no neurônio e um double para viés na saída
 
 ```c
 	double _inputs[] = {6,7};
@@ -19,22 +16,40 @@ First you need an array of doubles (that will be your input), a double for bias 
 	double _biasOutput = 0;
 ```
 
-Then you can initialize the class with those variables.
+Então você pode inicializar a classe com essas variáveis.
 
 ```c
 	RedeNeural n(_inputs, _biasNeuron, _biasOutput);
 ```
 
-And so the output is fed, you use the feedForward function.
+E para que a saída seja alimentada, você usa a função feedForward.
 
 ```c
 	n.feedForward();
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Inicialmente a rede neural possui 2 inputs, 2 neurons e 2 outputs. Para alterar isso, basta ir no código e mudar as constantes específicas.
 
-Please make sure to update tests as appropriate.
+```c
+	#define N_INPUTS 2
+	#define N_NEURONS 4
+	#define N_OUTPUTS 2
+```
+
+Os axons também estão restritos por MIN e MAX. Mudar esses valores também segue a mesma lógica.
+
+```c
+	#define MIN_AXON -1
+	#define MAX_AXON 1
+	//#define ESCOPO_DECIMAL_AXON 100
+```
+
+Obs.: O limite de escopo decimal foi desabilitado por padrão. Os doubles estão ilimitados. Caso queira limitar as casas decimais, descomente as linhas apropriadas.
+
+## Contributing
+Pull requests são bem-vindos. Para mudanças importantes, abra um problema primeiro para discutir o que você gostaria de mudar.
+
+Certifique-se de atualizar os testes conforme apropriado.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
