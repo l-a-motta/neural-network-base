@@ -1,6 +1,6 @@
 # neural-network-base
 
-Esta é uma base para uma rede neural em C ++, com feedforwarding, mas sem backpropagation
+Esta é uma base para uma rede neural em C ++, com feedforwarding, mas sem backpropagation. Também há uma pequena imagem com uma visualização dos valores internos de uma rede neural genérica.
 
 ## Installation
 
